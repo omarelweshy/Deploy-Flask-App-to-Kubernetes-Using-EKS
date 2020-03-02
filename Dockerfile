@@ -3,11 +3,11 @@ FROM python:stretch
 COPY . /main
 WORKDIR /main
 
-RUN pip install --upgrade pip
-RUN pip install flask
-RUN pip install gunicorn
-RUN pip install pyjwt
-RUN pip install pytest
+RUN pip3 install --upgrade pip3
+RUN pip3 install flask
+RUN pip3 install gunicorn
+RUN pip3 install jwt
+RUN pip3 install pytest
 
 
-ENTRYPOINT ["python", "main.py"]
+ENTRYPOINT ["python3", "main.py"]
